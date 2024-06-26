@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'login_page.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -12,9 +11,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(Duration(seconds: 3), () {
-      Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => LoginPage()),
-      );
+      Navigator.of(context).pushReplacementNamed('/login');
     });
   }
 
@@ -28,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
             FlutterLogo(size: 100.0),
             SizedBox(height: 20.0),
             Text(
-              'Welcome to Simple App',
+              'Welcome to My Flutter Application',
               style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
             ),
           ],
